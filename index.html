@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📌 ToDo</h1>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter new task...">
+      <select id="priority">
+        <option value="High">🔴 High</option>
+        <option value="Medium" selected>🟡 Medium</option>
+        <option value="Low">🟢 Low</option>
+      </select>
+      <input type="date" id="dueDate">
+      <select id="category">
+        <option value="Work">💼 Work</option>
+        <option value="Personal">🏠 Personal</option>
+        <option value="Other">📌 Other</option>
+      </select>
+      <button onclick="addTask()">➕ Add</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="setFilter('All')">All</button>
+      <button onclick="setFilter('Pending')">Pending</button>
+      <button onclick="setFilter('Completed')">Completed</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="progress">
+      <p id="progressText">Progress</p>
+      <div class="bar">
+        <div id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
